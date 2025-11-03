@@ -35,7 +35,7 @@ const HeroSection = () => {
       {/* Top Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
-          <video autoPlay muted loop id="myVideo" className={styles.heroVideo}>
+          <video autoPlay muted loop className={styles.myVideo}>
             <source src="/images/hero/hero-banner.webm" type="video/webm" />
           </video>
 

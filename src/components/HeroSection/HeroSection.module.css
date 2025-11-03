@@ -411,6 +411,8 @@
 
     .mobileView{
         display: block;
+        position: relative;
+        top: -38px;
     }
 
     .heroBottomContainer {
