@@ -1,0 +1,245 @@
+.dealSection {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.dealContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1383px;
+  width: 100%;
+}
+
+.dealSection h2 {
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: -1.28px;
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f9f6eb 25%,
+    #f1e1a6 60%,
+    #d8bf7e 85%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 3rem 24px;
+}
+
+/* ===== Phone + Store Buttons ===== */
+.dealShowcase {
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 20px;
+  padding: 1px;
+}
+
+.phoneFrame {
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.phoneFrame img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.dealShowcase::before {
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(
+      90deg,
+      #ffcc5b 0,
+      #ffcc5b 20%,
+      rgba(255, 204, 91, 0)
+    ),
+    linear-gradient(180deg, #ffcc5b 0, #ffcc5b 20%, rgba(255, 204, 91, 0));
+  background-position: 0 0, 0 0;
+  background-size: 50% 100%, 100% 50%;
+  background-repeat: no-repeat;
+  animation: preqtAppSectionPulseGlow 2s infinite alternate;
+}
+
+.dealShowcase::after {
+  bottom: -2px;
+  right: -2px;
+  background: linear-gradient(
+      270deg,
+      #ffcc5b 0,
+      #ffcc5b 20%,
+      rgba(255, 204, 91, 0)
+    ),
+    linear-gradient(0deg, #ffcc5b 0, #ffcc5b 20%, rgba(255, 204, 91, 0));
+  background-position: 100% 100%, 100% 100%;
+  background-size: 50% 100%, 100% 50%;
+  background-repeat: no-repeat;
+  animation: preqtAppSectionPulseGlow reverse 2s infinite alternate;
+}
+
+.dealShowcase::after,
+.dealShowcase::before {
+  content: "";
+  position: absolute;
+  width: calc(30% + 40px);
+  height: calc(50% + 40px);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(10px);
+  opacity: 0.6;
+}
+
+/* ===== FAQ / Accordion ===== */
+.faqContainer {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.faqColumn {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background: #141414;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  overflow: visible;
+  transition: all 0.5s ease;
+}
+
+.faqQuestion {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqAnswer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.faqAnswerText {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  text-align: left;
+  padding: 12px 16px 16px;
+  margin: unset;
+}
+
+.faqItem.active .faqAnswer {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.faqItem.active {
+  border-color: #555;
+  box-shadow: 0 0 10px rgba(255, 204, 91, 0.1);
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  background-image: url("/images/deals/faq-arrow-shadow.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.faqItem.active .icon {
+  transform: rotate(45deg);
+}
+
+/* ===== Keyframes ===== */
+@keyframes preqtAppSectionPulseGlow {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+
+@media (max-width:768px) {
+    .dealContainer h2 {
+        font-size: 40px;
+    }
+
+    .faqContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+      .phoneFrame img {
+        height:400px;
+  
+}
+}
+
+@media(max-width:480px) {
+    .dealSection {
+        padding: 20px 16px;
+    }
+
+    .dealContainer h2 {
+        font-size: 28px;
+        line-height: 42px;
+        margin: 0 2rem 5px;
+    }
+
+    .faqQuestion {
+        padding: 10px 14px;
+    }
+     .phoneFrame img {
+        height:250px;
+  
+}
+}
+
+@media(max-width:375px){
+    .phoneFrame img {
+        height:200px;
+  
+}
+}

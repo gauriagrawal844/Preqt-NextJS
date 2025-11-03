@@ -1,0 +1,192 @@
+.processSection {
+    background-color: #111;
+    padding: 120px 16px;
+}
+
+.processContainer {
+    display: flex;
+    gap: 120px;
+    position: relative;
+}
+
+
+.networkTag {
+    max-width: max-content;
+    margin: auto auto 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #A1A1AA;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: rgba(45, 45, 45, .4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+
+.networkTag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    padding: 1px;
+    background: linear-gradient(170deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.processImage {
+    max-width: 491px;
+    width: 50%;
+}
+
+.processImage img {
+    height: auto;
+    width: 100%;
+    position: sticky;
+    top: 10%;
+}
+
+.processRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.networkTag {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.processRight h2 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 74px;
+    letter-spacing: -0.64px;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+    max-width: 670px;
+    width: 100%;
+    background: linear-gradient(rgb(255, 255, 255),
+            rgb(249, 246, 235) 25%,
+            rgb(241, 225, 166) 60%,
+            rgb(216, 191, 126) 85%) text;
+}
+
+.processCard {
+    border: 0.5px solid #ababab66;
+    gap: 16px;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    margin-bottom: 60px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.lastCard {
+    margin-bottom: 0;
+}
+
+.processCard h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 14px;
+}
+
+.processCard p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 0;
+}
+
+
+
+@media(max-width:1440px) {
+    .processContainer {
+        gap: 60px;
+    }
+
+}
+
+@media(max-width:1024px) {
+
+    .processContainer {
+        gap: 20px;
+    }
+
+    .processImage img {
+        height: 350px;
+    }
+}
+
+
+@media (max-width:768px) {
+
+    .processRight .networkTag {
+        align-self: center;
+    }
+
+    .processImage {
+        display: none;
+    }
+
+    .processRight h2 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media(max-width:480px) {
+    .processSection {
+        padding: 50px 16px;
+    }
+
+    .processRight .networkTag {
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    .processRight h2 {
+        font-size: 32px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .processCard {
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+
+    .processCard h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .processCard p {
+        font-size: 14px;
+    }
+}

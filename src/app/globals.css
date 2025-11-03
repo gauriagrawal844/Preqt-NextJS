@@ -1,6 +1,6 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -17,10 +17,157 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueBlack.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueMediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueBoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueHeavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueHeavyItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueThin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueThinItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueUltraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    src: url('/fonts/helvetica-neue-5/HelveticaNeueUltraLightItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: white;
+    /* font-family: 'Helvetica Neue', sans-serif; */
+    overflow-x: hidden;
+}
+
+.parent {
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
 }

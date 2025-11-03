@@ -1,0 +1,492 @@
+
+.networkSection {
+    background: #111;
+    padding: 80px 16px 0;
+    position: relative;
+}
+
+.networkOverlay img {
+    width: 100%;
+}
+
+.counterSection {
+    display: flex;
+    padding: 40px 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    border-radius: 32px;
+    border: 1px solid rgba(171, 171, 171, .2);
+    background: #1A1A1A;
+    max-width: max-content;
+    width: 100%;
+    margin: auto auto -83px;
+    position: relative;
+    z-index: 9;
+}
+
+.counter {
+    /* ensures the span gets the module class name so JS selectors work */
+    display: inline-block;
+    min-width: 1ch;
+    /* optional: match h4 sizing if you want */
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.counterBox h4 {
+    font-size: 48px;
+    line-height: 130%;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.counterBox p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #A1A1AA;
+}
+
+.networkLine {
+    height: 50px;
+    width: 1px;
+    background: rgba(171, 171, 171, .2);
+}
+
+.networkTag {
+    max-width: max-content;
+    margin: auto auto 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #A1A1AA;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: rgba(45, 45, 45, .4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+
+.networkTag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    padding: 1px;
+    background: linear-gradient(170deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.networkMainContainer {
+    border-radius: 160px 160px 0 0;
+    border-top: 1px solid rgba(171, 171, 171, .4);
+    background: url('/images/network/circle-dots.svg') center 2% no-repeat, url('/images/network/landing-ellipse.png') center 1% no-repeat;
+    background-size: 75%, 120%;
+    padding: 125px 0 215px;
+    position: relative;
+}
+
+/* Choose Section */
+.chooseSection {
+    text-align: center;
+    padding: 0px;
+}
+
+.networkHeader {
+    text-align: center;
+    margin: 60px 0;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.networkHeader div {
+    max-width: max-content;
+    margin: auto auto 30px;
+}
+
+.networkHeader h1 {
+    font-size: 57px;
+    font-weight: 500;
+    margin: 0;
+    background: linear-gradient(180deg, #FFFFFF 60%, #d8bf7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.networkHeader h1 span {
+    background: linear-gradient(180deg, #fdf7fe, #d8bf7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.networkHeader p {
+    color: #FFF;
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    max-width: 470px;
+    margin: 40px auto 0;
+}
+
+.cardsContainer {
+    position: relative;
+    height: 190vh;
+    padding-top: 50px;
+    /* Initial space above first card */
+    transition: padding-top 0.8s ease-out;
+}
+
+/* Sticky Cards */
+.chooseCard {
+    width: 100%;
+    position: sticky;
+    top: 40%;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    border: .5px solid rgba(171, 171, 171, .4);
+    background: #1A1A1A;
+    transform-origin: center top;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    overflow: hidden;
+    will-change: transform, opacity;
+    opacity: 0;
+}
+
+.cardInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 64px 0 0 60px;
+}
+
+.card2 .cardInner {
+    padding-left: 0;
+    padding-right: 60px;
+}
+
+.card1 {
+    top: 15%;
+    z-index: 1;
+}
+
+.card2 {
+    top: 19%;
+    z-index: 2;
+}
+
+.card3 {
+    top: 22%;
+    z-index: 3;
+}
+
+.card-right img {
+    max-width: 580px;
+    width: 100%;
+
+    /* min-height: 460px; */
+}
+
+.cardLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 60%;
+    padding: 36px 40px 64px 0;
+}
+
+.card2 .cardLeft {
+    padding: 36px 0 64px 40px;
+}
+
+.cardLeftText {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    letter-spacing: .4px;
+}
+
+.cardLeftDesc {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 28px;
+    margin-top: 16px;
+}
+
+.cardLeftList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.cardList {
+    display: flex;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 100px;
+    border: .25px solid #242424;
+    background: #242424;
+    overflow: hidden;
+}
+
+.cardList div {
+    border: 1px solid #6d6d6d;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardList p {
+    margin-bottom: unset;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .8px;
+}
+
+
+
+@media(max-width:1224px) {
+    .networkHeader h1 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width:1024px) {
+
+    /* network-section */
+
+    .cardRight img {
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+
+    .cardInner {
+        padding: 23px 0 0 23px;
+    }
+
+    .cardLeft {
+        padding: 18px 21px 37px 0;
+    }
+
+    .card2 .cardLeft {
+        padding: 18px 0 37px 21px;
+    }
+
+    .card2 .cardInner {
+        padding: 23px 23px 0 0;
+    }
+}
+
+
+
+@media(max-height:670px) {
+
+    .networkHeader {
+        padding-top: 50px;
+    }
+   
+}
+
+@media (max-width:768px) {
+
+    /* network-section */
+    .networkSection {
+        padding: 40px 16px;
+    }
+
+    .networkHeader h1 {
+        font-size: 40px;
+    }
+
+    .cardsContainer {
+        height: 350vh;
+    }
+
+    .card3 {
+        top: 10%;
+    }
+
+    .chooseCard {
+        top: 10%;
+    }
+
+    .cardLeftList {
+        margin-top: 14px;
+    }
+
+    .cardInner {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .card2 .cardInner {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cardLeft,
+    .card2 .cardLeft {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .cardRight img {
+        max-width: unset;
+        object-fit: fill;
+        height: 350px;
+    }
+
+    .cardLeftText {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .cardLeftDesc {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .counterBox h4 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .counterSection {
+        padding: 20px 30px;
+        border-radius: 20px;
+        gap: 30px;
+    }
+
+}
+
+@media(max-width:480px) {
+    /* network-section */
+    .counterSection {
+        gap: 20px;
+    }
+
+    .counterBox h4 {
+        margin-bottom: 6px;
+    }
+
+    .counterBox p {
+        font-size: 14px;
+    }
+
+    .networkHeader {
+        margin: 10px 0;
+    }
+
+    .networkHeader h1 {
+        font-size: 28px;
+    }
+
+    .networkHeader p {
+        font-size: 14px;
+    }
+
+    .cardsContainer {
+        height: 300vh;
+        padding-top: 50px;
+    }
+
+    .cardInner {
+        -webkit-backface-visibility: hidden;
+        contain: paint;
+    }
+
+    .cardRight img,
+    .cardInner {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
+    }
+
+    .cardInner {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .cardLeftText {
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    .networkMainContainer {
+        padding: 80px 0;
+    }
+
+    .cardLeftDesc {
+        font-size: 16px;
+        margin-top: unset;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: .7px;
+    }
+
+
+    .cardRight img {
+        width: 100%;
+        object-fit: fill;
+        height: 270px;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+
+    .counterBox h4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .cardList div {
+        height: 24px;
+        width: 24px;
+    }
+
+    .cardList p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .cardList {
+        padding: 12px 10px;
+        gap: 11px;
+    }
+
+    .cardLeftDesc {
+        font-size: 14px;
+    }
+}
